@@ -30,7 +30,9 @@ app.get('/admin', authenticateUser, authorizeAdmin, (req,res) => {
 
 //user
 app.get('/user', authenticateUser, (req, res) => {
-  res.send('Welcome User!!');
+  const username = null;
+  const name = username || 'Stranger';
+  res.send(`Hello, ${name}`);;
 });
 
 const PORT = process.env.PORT || 3000;
