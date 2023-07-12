@@ -1,2 +1,2 @@
-Create a web application that allows users to submit a form with their name, email, and message. The application should store the submitted data in a   
+Create a web application that allows users to submit a form with their name, email, and message. The application should store the submitted data in a  
 local array and display a list of all messages submitted so far on a separate page
