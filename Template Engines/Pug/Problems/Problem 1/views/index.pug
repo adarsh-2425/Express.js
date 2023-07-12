@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 My Product
+    ul
+      each product in products
+        li= product.name + ' - $' + product.price
+    br
+    h2 Add Product
+    form(action='/' method='post')
+      input(type='text' name='name' placeholder='Product Name')
+      input(type='number' step='0.01' name='price' placeholder='Product Price')
+      button(type='submit') Add Product
