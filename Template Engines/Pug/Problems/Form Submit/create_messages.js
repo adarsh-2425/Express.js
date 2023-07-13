@@ -1,8 +1,13 @@
 const express = require('express');
-const app = express();
 const router  = express.Router();
+const messages = require('./message_DB');
 
-//create message
+// render create messages pug
+router.get('/', (req, res) => {
+  res.render('create_messages');
+});
+
+// create message route handler
 router.post('/', (req, res) => {
   const { name, email, message } = req.body;
   const id = messages.length + 1;
@@ -10,7 +15,7 @@ router.post('/', (req, res) => {
   const newMessage = { id, name, email, message };
   messages.push(newMessage);
 
-  res.send('success');
+  res.redirect('/messages');
 });
 
 module.exports = router;
