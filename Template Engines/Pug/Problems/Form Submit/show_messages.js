@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const messages = require('./message_DB');
 
-//get messages
+//render get messages
 router.get('/', (req, res) => {
-  //res.render('messages', { messages });
-  res.send(messages);
+  res.render('show_messages', { messages });
 });
 
 //export module
