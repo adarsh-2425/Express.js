@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Send Messages
+  form(action='/messages/add' method='post')
+    input(type='text' name='name' placeholder='Enter Your Name')
+    input(type='email' name='email' placeholder='Enter Your Email')
+    input(type='text' name='message' placeholder='Enter Message')
+    button(type='submit') Send Message
