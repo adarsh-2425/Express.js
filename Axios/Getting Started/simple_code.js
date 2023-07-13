@@ -8,7 +8,7 @@ const API_URI = 'https://jsonplaceholder.typicode.com/posts';
 const getPosts = async (req, res) => {
   try {
     const response = await axios.get(API_URI);
-    const posts = response.data;
+    const posts = response.data; // Accessing the already parsed JSON data
     posts.forEach(post => console.log(post.title));
   } catch (err) {
     console.log(err);
