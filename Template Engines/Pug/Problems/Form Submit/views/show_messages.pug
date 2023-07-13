@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1 Messages
+  ul
+    each message in messages
+      li= message.name + ' ' + message.email + ' ' + message.message
